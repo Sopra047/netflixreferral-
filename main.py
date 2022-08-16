@@ -10,9 +10,9 @@ PAYMENT_CHANNEL = "@MTNreferral" #add payment channel here including the '@' sig
 OWNER_ID = 5270469995 #write owner's user id here.. get it from @MissRose_Bot by /id
 CHANNELS = ["@MTNreferral"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
-Daily_bonus = 250 #Put daily bonus amount here!
-Mini_Withdraw = 20000  #remove 0 and add the minimum withdraw u want to set
-Per_Refer = 1000 #add per refer bonus here
+Daily_bonus = 0.5 #Put daily bonus amount here!
+Mini_Withdraw = 10  #remove 0 and add the minimum withdraw u want to set
+Per_Refer = 1 #add per refer bonus here
 
 bot = telebot.TeleBot(BOT_TOKEN)
 
@@ -186,7 +186,7 @@ def send_text(message):
         bot.send_message(message.chat.id, msg, parse_mode="Markdown")
     if message.text == '🙌🏻 Parrainages':
         data = json.load(open('users.json', 'r'))
-        ref_msg = "*⏯️ Total Invites : {} Utilisateurs\n\n👥Système de parrainage\n\n1 Level:\n🥇 Level°1 - {} {}\n\n🔗 Lien de référence Partagez pour recevoir rapidement de gain⬇️\n{}*"
+        ref_msg = "*⏯️ Total Invites : {} Utilisateurs\n\n👥Système de parrainage\n\n1 Level:\n🥇 Level°1 - {} {}\n\n🔗 Lien de référence Partagez pour recevoir rapidement un compte Netflix⬇️\n{}*"
 
         bot_name = bot.get_me().username
         user_id = message.chat.id
@@ -207,7 +207,7 @@ def send_text(message):
 
         keyboard = telebot.types.ReplyKeyboardMarkup(True)
         keyboard.row('🚫 Annuler')
-        send = bot.send_message(message.chat.id, "_⚠️Envoyez votre numéro  MTN dans le format international  Exemple: au cameroun (+237xxxxxxxxx)._",
+        send = bot.send_message(message.chat.id, "_⚠️Envoyez ton numero de telephone._",
                                 parse_mode="Markdown", reply_markup=keyboard)
         # Next message will call the name_handler function
         bot.register_next_step_handler(message, trx_address)
