@@ -5,10 +5,10 @@ import telebot
 ##TOKEN DETAILS
 TOKEN = "POINTS"
 
-BOT_TOKEN = "5555491322:AAGlbXGRTo-nGDKAXBlyPy-ixzKepLboDUM"
-PAYMENT_CHANNEL = "@MTNreferral" #add payment channel here including the '@' sign
+BOT_TOKEN = "5734844777:AAEbW9MVqHidCq-E7QfbFcNQwR4XZfKG0A0"
+PAYMENT_CHANNEL = "@Netflixaccountgratuit" #add payment channel here including the '@' sign
 OWNER_ID = 5270469995 #write owner's user id here.. get it from @MissRose_Bot by /id
-CHANNELS = ["@MTNreferral"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
+CHANNELS = ["@Netflixaccountgratuit"] #add channels to be checked here in the format - ["Channel 1", "Channel 2"] 
               #you can add as many channels here and also add the '@' sign before channel username
 Daily_bonus = 0.5 #Put daily bonus amount here!
 Mini_Withdraw = 10  #remove 0 and add the minimum withdraw u want to set
